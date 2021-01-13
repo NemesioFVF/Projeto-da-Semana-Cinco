@@ -8,41 +8,122 @@
     <title>Projeto da Semana Cinco - cadastro de Funcionarios</title>
 </head>
 <body>
-    
-    <form>
+        <fieldset> 
 
-    <diV>
-        <input type="text">
-        <input type="text">
-    </diV>
+             <legend> <h1>Cadastrar Novo Funcionario</h1> </legend>
+                        <fieldset>
+                            <legend>Dados Pessoais</legend>
+                            <table cellspacing="20">
+                                <tr>
+                                    <td>
+                                        <label for="nome">Nome Completo: </label>
+                                    </td>
+                                    <td align="left">
+                                        <input type="text" name="email">
+                                    </td>
+                                    <td>
+                                        <label>Nascimento: </label>
+                                    </td>
+                                    <td align="left">
+                                        <input type="date"> 
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="rg">RG: </label>
+                                    </td>
+                                    <td align="left">
+                                        <input type="text" name="rg" size="13" maxlength="13"> 
+                                    </td>
+                                    <td>
+                                        <label>CPF:</label>
+                                    </td>
+                                    <td align="left">
+                                        <input type="text" name="cpf">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label>Estado Cívil: </label>
+                                    </td>
+                                    <td align="left">
+                                        <select> 
+                                            <option value="" disabled="" selected="" >Selecione o Estado Cívil</option>
+                                            <option value="Solteiro(a)" class="black">Solteiro(a)</option>
+                                            <option value="Casado(a)" class="black">Casado(a)</option>
+                                            <option value="Viuvo(a)" class="black">Viuvo(a)</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <label>Carteira de Habilitação: </label>
+                                    </td>
+                                    <td align="left">
+                                        <select> 
+                                            <option value="" disabled="" selected="" >Tipo de Carteira</option>
+                                            <option value="Tipo A" class="black">Tipo A</option>
+                                            <option value="Tipo B" class="black">Tipo B</option>
+                                            <option value="Tipo C" class="black">Tipo C</option>
+                                        </select>
+                                    </td>
+                                    </td>
+                                </tr>
+                            </table>
+                        </fieldset>
+                        <br>
 
-    <diV>
-        <input type="text">  
-        <input type="text">
-    </diV>
-    <diV>
-        <input type="text">  
-        <input type="text">
-    </diV>
-    <diV>
-        <input type="text">  
-        <input type="text">
-    </diV>
-    <diV>
-        <input type="text">  
-        <input type="text">
-    </diV>
-    <diV>
-        <input type="text">  
-        <input type="text">
-    </diV>
+                        <fieldset>
+                            <legend>Dados de Endereço</legend>
+                            <table cellspacing="20">
+                                <tr>
+                                    <td>
+                                        <label for="nome">Rua: </label>
+                                    </td>
+                                    <td align="left">
+                                        <input type="text" name="email">
+                                    </td>
+                                    <td>
+                                        <label>CEP: </label>
+                                    </td>
+                                        <td align="left">
+                                    <input type="text"> 
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="rg">Bairro: </label>
+                                    </td>
+                                    <td align="left">
+                                        <input type="text" name="rg" size="13" maxlength="13"> 
+                                    </td>
+                                    <td>
+                                        <label>Cidade:</label>
+                                    </td>
+                                    <td align="left">
+                                        <input type="text" name="cpf">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label>Estado: </label>
+                                    </td>
+                                    <td>
+                                        <input type="text" name="cpf">
+                                    </td>
+                                    <td>
+                                        <label>Complemento: </label>
+                                    </td>
+                                    <td align="left">
+                                        <input type="text" name="cpf">
+                                    </td>
+                                </tr>
+                            </table>
+                        </fieldset>
+                    <br>
 
-    <diV> 
-        <input type="text">
-    </diV>
-    
+                <button> Cadastrar </button> 
+                <button> Limpar </button>
+        </fieldset>
 
-</form>
     <script src="script.js"></script>
 </body>
 </html>
