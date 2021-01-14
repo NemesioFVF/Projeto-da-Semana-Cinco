@@ -8,7 +8,8 @@
 
 body{
     color: white;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(116, 115, 25, 0.5)), url(img/fundo1.png);
+    text-shadow: 0px 0px 6px #000000;
+    background: linear-gradient(rgba(49, 48, 48, 0.5), rgba(23, 47, 116, 0.719)), url(img/fundo1.png);
     margin: -3% -7%;
     margin-bottom: 10%;
     font-size: 1.1em;
@@ -24,7 +25,7 @@ input, select {
     height: 25px;
     border-color: initial;
     font-family: 'Comfortaa', cursive;
-    background-color: rgba(163, 159, 159, 0.247);
+    background-color: rgba(19, 31, 49, 0.164);
     color: white;
     font-size: 1em;
 }
@@ -34,17 +35,25 @@ select {
     height: 30px;
 }
 
-
 option{
     color: black;
 }
+
+button {
+    margin-right:initial;
+    width: 100px;
+    height: 50px;
+}
+
+
+
 
 #cadastroF {
     margin: 2% 10%;
     text-align:left;
     justify-items: center;
     display: inline-block;
-    background-color: rgba(95, 35, 35, 0.322);
+    background-color: rgba(19, 31, 49, 0.322);
     border-radius: 15px;
     border-color: rgb(255, 255, 255);
     border-spacing: 50px;
