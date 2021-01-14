@@ -8,7 +8,7 @@
     <title>Projeto da Semana Cinco - cadastro de Funcionarios</title>
 </head>
 <body>
-        <fieldset> 
+        <fieldset id="cadastroF"> 
 
              <legend> <h1>Cadastrar Novo Funcionario</h1> </legend>
                         <fieldset>
@@ -19,10 +19,20 @@
                                         <label for="nome">Nome Completo: </label>
                                     </td>
                                     <td align="left">
-                                        <input type="text" name="email">
+                                        <input type="text" name="nomeC" id="NomeC">
                                     </td>
                                     <td>
-                                        <label>Nascimento: </label>
+                                        <label>Sexo: </label>
+                                    </td>
+                                    <td align="left">
+                                        <select> 
+                                            <option value="" disabled="" selected="" >Gênero</option>
+                                            <option value="Solteiro(a)" class="black">Masculino</option>
+                                            <option value="Casado(a)" class="black">Feminino</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <label>Data de Nascimento: </label>
                                     </td>
                                     <td align="left">
                                         <input type="date"> 
@@ -59,10 +69,12 @@
                                     </td>
                                     <td align="left">
                                         <select> 
-                                            <option value="" disabled="" selected="" >Tipo de Carteira</option>
-                                            <option value="Tipo A" class="black">Tipo A</option>
-                                            <option value="Tipo B" class="black">Tipo B</option>
-                                            <option value="Tipo C" class="black">Tipo C</option>
+                                            <option value="" disabled selected="" >Tipo de Carteira</option>
+                                            <option value="Categoria A" class="black">Categoria A</option>
+                                            <option value="Categoria B" class="black">Categoria B</option>
+                                            <option value="Categoria C" class="black">Categoria C</option>
+                                            <option value="Categoria D" class="black">Categoria D</option>
+                                            <option value="Categoria E" class="black">Categoria E</option>
                                         </select>
                                     </td>
                                     </td>
@@ -79,13 +91,19 @@
                                         <label for="nome">Rua: </label>
                                     </td>
                                     <td align="left">
-                                        <input type="text" name="email">
+                                        <input type="text" name="rua" id="nomeR">
                                     </td>
                                     <td>
-                                        <label>CEP: </label>
+                                        <label>Número:</label>
+                                    </td>
+                                    <td align="left">
+                                        <input type="text" id="nuM" name="numero">
+                                    </td>
+                                    <td>
+                                        <label class="cep">CEP: </label>
                                     </td>
                                         <td align="left">
-                                    <input type="text"> 
+                                    <input class="cep2" type="text"> 
                                     </td>
                                 </tr>
                                 <tr>
@@ -93,13 +111,13 @@
                                         <label for="rg">Bairro: </label>
                                     </td>
                                     <td align="left">
-                                        <input type="text" name="rg" size="13" maxlength="13"> 
+                                        <input type="text" name="bairro"> 
                                     </td>
                                     <td>
                                         <label>Cidade:</label>
                                     </td>
                                     <td align="left">
-                                        <input type="text" name="cpf">
+                                        <input type="text" name="cidade">
                                     </td>
                                 </tr>
                                 <tr>

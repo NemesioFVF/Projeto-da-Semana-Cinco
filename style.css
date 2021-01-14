@@ -1,0 +1,44 @@
+* {
+    border-radius: 7px;
+    
+}
+
+body{
+    color: white;
+    background-repeat:no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(25, 41, 116, 0.5)), url(img/fundo1.png);
+    margin: 3% 5%;
+}
+
+input, select {
+    height: 25px;
+    border-color: initial;
+}
+
+#cadastroF {
+    margin: 2% 10%;
+    text-align:left;
+    justify-items: center;
+    display: inline-block;
+    background-color: rgba(68, 73, 47, 0.178);
+    border-radius: 10px;
+    border-color: rgb(255, 255, 255);
+}
+
+#NomeC, #nomeR {
+    width: 370px;
+}
+
+#nuM {
+    width: 40px;
+    margin-left: -50px;
+}
+
+.cep {
+    margin-left: -160px;
+}
+
+.cep2 {
+    margin-left: -135px;
+
+}
