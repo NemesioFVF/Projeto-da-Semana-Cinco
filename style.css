@@ -8,13 +8,16 @@
 
 body{
     color: white;
-    background-repeat:no-repeat !important;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(116, 115, 25, 0.5)), url(img/fundo1.png);
     margin: -3% -7%;
     margin-bottom: 10%;
     font-size: 1.1em;
     overflow: hidden;
     font-family: 'Comfortaa', cursive;
+    background-size:100%;
+    background-attachment:fixed;
+    background-repeat: no-repeat;
+    background-color:black ;
 }
 
 input, select {
@@ -25,6 +28,12 @@ input, select {
     color: white;
     font-size: 1em;
 }
+
+select {
+    width: 120px;
+    height: 30px;
+}
+
 
 option{
     color: black;
@@ -58,14 +67,12 @@ option{
 .cep2 {
     margin-left: -165px;
     width: 131px;
-
 }
 
 #dadosP {
     width: 5px;
     display: flex;
 }
-
 
 #imgP {
     margin: 10px;
