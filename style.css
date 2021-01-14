@@ -1,3 +1,6 @@
+  
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+
 * {
     border-radius: 7px;
     
@@ -5,14 +8,26 @@
 
 body{
     color: white;
-    background-repeat:no-repeat;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(25, 41, 116, 0.5)), url(img/fundo1.png);
-    margin: 3% 5%;
+    background-repeat:no-repeat !important;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(116, 115, 25, 0.5)), url(img/fundo1.png);
+    margin: -3% -7%;
+    margin-bottom: 10%;
+    font-size: 1.1em;
+    overflow: hidden;
+    font-family: 'Comfortaa', cursive;
 }
 
 input, select {
     height: 25px;
     border-color: initial;
+    font-family: 'Comfortaa', cursive;
+    background-color: rgba(163, 159, 159, 0.247);
+    color: white;
+    font-size: 1em;
+}
+
+option{
+    color: black;
 }
 
 #cadastroF {
@@ -20,13 +35,15 @@ input, select {
     text-align:left;
     justify-items: center;
     display: inline-block;
-    background-color: rgba(68, 73, 47, 0.178);
-    border-radius: 10px;
+    background-color: rgba(95, 35, 35, 0.322);
+    border-radius: 15px;
     border-color: rgb(255, 255, 255);
+    border-spacing: 50px;
+    
 }
 
 #NomeC, #nomeR {
-    width: 370px;
+    width: 300px;
 }
 
 #nuM {
@@ -35,10 +52,27 @@ input, select {
 }
 
 .cep {
-    margin-left: -160px;
+    margin-left: -210px;
 }
 
 .cep2 {
-    margin-left: -135px;
+    margin-left: -165px;
+    width: 131px;
 
 }
+
+#dadosP {
+    width: 5px;
+    display: flex;
+}
+
+
+#imgP {
+    margin: 10px;
+    width: 120px;
+}
+
+::-webkit-scrollbar{width: 7px;}
+::-webkit-scrollbar-track {background:rgb(211, 208, 208)}
+::-webkit-scrollbar-thumb{background: linear-gradient(#a1802785,#9fa12760)}
+::-webkit-scrollbar-thumb:hover{background:linear-gradient(rgb(248, 230, 197),rgb(245, 248, 197))}
