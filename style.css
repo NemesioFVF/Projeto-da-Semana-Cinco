@@ -77,18 +77,21 @@ button {
     width: 320px;
     padding : -25%;
 }
+#inCom{
+    width: 320px;
+}
 
 #nuM {
-    width: 40px;
-    margin-left: -50px;
+    width: 80px;
+    margin-left: 1px;
 }
 
 .cep {
-    margin-left: -160px;
+    margin-left: -210px;
 }
 
 .cep2 {
-    margin-left: -120px;
+    margin-left: -160px;
     width: 131px;
 }
 
@@ -119,6 +122,10 @@ input[type="file"] {
     transition: all 1s;
     font-size: 1.1em;
     font-display:unset;
+}
+
+.laCom {
+    margin-left: -90px;
 }
 
 #RGs{
