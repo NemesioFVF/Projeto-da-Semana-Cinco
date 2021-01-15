@@ -11,15 +11,12 @@
         <fieldset id="cadastroF"> 
 
              <legend> <h1>Cadastrar Novo Funcionario</h1> </legend>
-                        <fieldset id="dadosP"> 
+                        <fieldset class="dadosP"> 
                            
-        <div>
-            <label id="imgFunci" for="arquivo"> <br><br>Adiconar Foto</label>
-            <input type="file" name="arquivo" id="arquivo">
-        </div>
-    </form>
-
-                            </form>
+                            <div>
+                                <label id="imgFunci" for="arquivo"> <br><br>Adiconar Foto</label>
+                                <input type="file" name="arquivo" id="arquivo">
+                            </div>
 
                             <legend>Dados Pessoais</legend>
                             <table cellspacing="10">
@@ -55,13 +52,13 @@
                                         <label for="rg">RG: </label>
                                     </td>
                                     <td>
-                                        <input type="text" name="rg" size="13" maxlength="13"> 
+                                        <input type="text" id="RGs" name="rg" size="13" maxlength="13"> 
                                     </td>
                                     <td>
-                                        <label>CPF:</label>
+                                        <label id="labCPF" >CPF:</label>
                                     </td>
                                     <td >
-                                        <input type="text" name="cpf">
+                                        <input id="inCPF" type="text" name="cpf">
                                     </td>
                                 </tr>
                                 <tr>
@@ -77,10 +74,10 @@
                                         </select>
                                     </td>
                                     <td>
-                                        <label>Carteira de Habilitação: </label>
+                                        <label id="labEC" >Carteira de Habilitação: </label>
                                     </td>
                                     <td >
-                                        <select> 
+                                        <select id="seleCH"> 
                                             <option value="" disabled selected="" >Tipo de Carteira</option>
                                             <option value="Categoria A" class="black">Categoria A</option>
                                             <option value="Categoria B" class="black">Categoria B</option>
@@ -96,7 +93,7 @@
                         </fieldset>
                         <br>
 
-                        <fieldset>
+                        <fieldset class="dadosP">
                             <legend>Dados de Endereço</legend>
                             <table cellspacing="10">
                                 <tr>

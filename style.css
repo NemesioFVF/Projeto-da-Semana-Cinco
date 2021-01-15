@@ -9,7 +9,7 @@ body{
     color: white;
     text-shadow: 0px 0px 6px #000000;
     background: linear-gradient(rgba(49, 48, 48, 0.5), rgba(23, 47, 116, 0.719)), url(img/fundo1.png);
-    margin: -3% -7%;
+    margin: -3% -9%;
     margin-bottom: 10%;
     font-size: 1.1em;
     overflow: hidden;
@@ -31,7 +31,7 @@ input, select {
 }
 
 select {
-    width: 120px;
+    width: 150px;
     height: 30px;
 }
 
@@ -63,9 +63,9 @@ button {
 }
 
 #data{
-    margin-left: -320px;
+    margin-left: -210px;
     width: 180px;
-
+    height: 30px;
 }
 
 #NomeC {
@@ -84,17 +84,18 @@ button {
 }
 
 .cep {
-    margin-left: -210px;
+    margin-left: -160px;
 }
 
 .cep2 {
-    margin-left: -165px;
+    margin-left: -120px;
     width: 131px;
 }
 
-#dadosP {
-    width: 5px;
+.dadosP {
+    width: -10px;
     display: flex;
+    margin-right: 5px;
 }
 
 input[type="file"] {
@@ -112,8 +113,6 @@ input[type="file"] {
     border-style:groove;
     margin: 10px;
     cursor: pointer;
-  
-
     background: linear-gradient(rgba(46, 86, 160, 0.247), rgba(23, 116, 104, 0.425)),url('img/user.svg') ;
     background-repeat: no-repeat;
     background-position: center;
@@ -121,7 +120,18 @@ input[type="file"] {
     font-size: 1.1em;
     font-display:unset;
 }
-  
+
+#RGs{
+    width: 210px;
+}
+
+#labCPF {
+    margin-left: -300px;
+}
+
+#inCPF {
+    margin-left: -247px;
+}
 
 #imgFunci:hover{
     background-color: rgba(16, 25, 31, 0.705);
@@ -130,8 +140,18 @@ input[type="file"] {
 
 #colaboradores {
     filter: drop-shadow(15px 10px 5px rgba(0, 0, 0,.5));
-    margin: 12% -200px;
-    height: 300px;
+    margin: 12% -132px;
+    height: 400px;
+    width: 555px;
+}
+
+#labEC {
+    margin-left: -400px;
+}
+
+#seleCH {
+    margin-left: -174px;
+
 }
 
 ::-webkit-scrollbar{width: 7px;}
