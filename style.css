@@ -19,6 +19,7 @@ body{
     background-attachment:fixed;
     background-repeat: no-repeat;
     background-color:black ;
+    display: flex;
 }
 
 input, select {
@@ -45,11 +46,8 @@ button {
     height: 50px;
 }
 
-
-
-
 #cadastroF {
-    margin: 2% 10%;
+    margin: 5% 9%;
     text-align:left;
     justify-items: center;
     display: inline-block;
@@ -57,6 +55,7 @@ button {
     border-radius: 15px;
     border-color: rgb(255, 255, 255);
     border-spacing: 50px;
+    height: 610px;
     
 }
 
@@ -85,7 +84,15 @@ button {
 
 #imgP {
     margin: 10px;
-    width: 120px;
+    padding-top: 20px;
+    width: 125px;
+    height: 150px;
+}
+
+#colaboradores {
+
+    margin: 10% -250px;
+    height: 450px;
 }
 
 ::-webkit-scrollbar{width: 7px;}
