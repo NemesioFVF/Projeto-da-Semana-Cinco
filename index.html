@@ -5,28 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css"/>
 
-    <title>Projeto da Semana Cinco - cadastro de Funcionarios</title>
+    <title>Projeto da Semana Cinco - Cadastro de Funcionarios</title>
 </head>
 <body>
         <fieldset id="cadastroF"> 
 
              <legend> <h1>Cadastrar Novo Funcionario</h1> </legend>
-                        <fieldset id="dadosP"> <img src="img/fundo1.png" id="imgP" > 
+                        <fieldset id="dadosP"> 
+                           
+        <div>
+            <label id="imgFunci" for="arquivo"> <br><br>Adiconar Foto</label>
+            <input type="file" name="arquivo" id="arquivo">
+        </div>
+    </form>
+
+                            </form>
+
                             <legend>Dados Pessoais</legend>
                             <table cellspacing="10">
                                 <tr>
-                                    <td>
-                                        <label for="nome">Nome Completo: </label>
+                                    <td >
+                                        <label>Nome: </label>
                                     </td>
-                                    <td align="left">
-                                        <input type="text" name="nomeC" id="NomeC">
+                                    <td >
+                                        <input type="text" name="nomeC" id="NomeC" placeholder="Digite o Nome Completo do Funcionario">
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
                                         <label>Sexo: </label>
                                     </td>
-                                    <td align="left">
+                                    <td>
                                         <select> 
                                             <option value="" disabled="" selected="" >Gênero</option>
                                             <option value="Masculino" class="black">Masculino</option>
@@ -34,10 +43,10 @@
                                         </select>
                                     </td>
                                     <td>
-                                        <label>Data de Nascimento: </label>
+                                        <label id="DataDNas">Data de Nascimento: </label>
                                     </td>
-                                    <td align="left">
-                                        <input type="date"> 
+                                    <td>
+                                        <input type="date" id="data"> 
                                     </td>
                                 </tr>
                                 <tr>
@@ -45,13 +54,13 @@
                                     <td>
                                         <label for="rg">RG: </label>
                                     </td>
-                                    <td align="left">
+                                    <td>
                                         <input type="text" name="rg" size="13" maxlength="13"> 
                                     </td>
                                     <td>
                                         <label>CPF:</label>
                                     </td>
-                                    <td align="left">
+                                    <td >
                                         <input type="text" name="cpf">
                                     </td>
                                 </tr>
@@ -59,7 +68,7 @@
                                     <td>
                                         <label>Estado Cívil: </label>
                                     </td>
-                                    <td align="left">
+                                    <td >
                                         <select> 
                                             <option value="" disabled="" selected="" >Estado Cívil</option>
                                             <option value="Solteiro(a)" class="black">Solteiro(a)</option>
@@ -70,7 +79,7 @@
                                     <td>
                                         <label>Carteira de Habilitação: </label>
                                     </td>
-                                    <td align="left">
+                                    <td >
                                         <select> 
                                             <option value="" disabled selected="" >Tipo de Carteira</option>
                                             <option value="Categoria A" class="black">Categoria A</option>
@@ -94,19 +103,19 @@
                                     <td>
                                         <label for="nome">Rua: </label>
                                     </td>
-                                    <td align="left">
+                                    <td >
                                         <input type="text" name="rua" id="nomeR">
                                     </td>
                                     <td>
                                         <label>Número:</label>
                                     </td>
-                                    <td align="left">
+                                    <td >
                                         <input type="text" id="nuM" name="numero">
                                     </td>
                                     <td>
                                         <label class="cep">CEP: </label>
                                     </td>
-                                        <td align="left">
+                                        <td >
                                     <input class="cep2" type="text"> 
                                     </td>
                                 </tr>
@@ -114,13 +123,13 @@
                                     <td>
                                         <label for="rg">Bairro: </label>
                                     </td>
-                                    <td align="left">
+                                    <td >
                                         <input type="text" name="bairro"> 
                                     </td>
                                     <td>
                                         <label>Cidade:</label>
                                     </td>
-                                    <td align="left">
+                                    <td >
                                         <input type="text" name="cidade">
                                     </td>
                                 </tr>
@@ -134,19 +143,19 @@
                                     <td>
                                         <label>Complemento: </label>
                                     </td>
-                                    <td align="left">
+                                    <td >
                                         <input type="text" name="cpf">
                                     </td>
                                 </tr>
                             </table>
                         </fieldset>
-                    <br>
+                    <br> <br>
  
         <button id="cadastrar"> Cadastrar </button>
         <button id="limpar"> Limpar </button>
         </fieldset>
 
-         <img src="img/img1.png" id="colaboradores" > 
+         <img src="img/colabF.svg" id="colaboradores" > 
 
     <script src="script.js"></script>
 </body>

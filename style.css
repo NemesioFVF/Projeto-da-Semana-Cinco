@@ -3,7 +3,6 @@
 
 * {
     border-radius: 7px;
-    
 }
 
 body{
@@ -46,6 +45,7 @@ button {
     height: 50px;
 }
 
+
 #cadastroF {
     margin: 5% 9%;
     text-align:left;
@@ -56,11 +56,26 @@ button {
     border-color: rgb(255, 255, 255);
     border-spacing: 50px;
     height: 610px;
-    
 }
 
-#NomeC, #nomeR {
-    width: 300px;
+#DataDNas{
+    margin-left: -405px;
+}
+
+#data{
+    margin-left: -320px;
+    width: 180px;
+
+}
+
+#NomeC {
+    width: 550px;
+    padding : -25%;
+}
+
+#nomeR {
+    width: 320px;
+    padding : -25%;
 }
 
 #nuM {
@@ -82,17 +97,41 @@ button {
     display: flex;
 }
 
-#imgP {
-    margin: 10px;
-    padding-top: 20px;
+input[type="file"] {
+    display: none;
+}
+#imgFunci {
+    padding-top: 10px;
     width: 125px;
     height: 150px;
+    background-color: rgba(0, 66, 209, 0.048);
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+    border-style:groove;
+    margin: 10px;
+    cursor: pointer;
+  
+
+    background: linear-gradient(rgba(46, 86, 160, 0.247), rgba(23, 116, 104, 0.425)),url('img/user.svg') ;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 1s;
+    font-size: 1.1em;
+    font-display:unset;
+}
+  
+
+#imgFunci:hover{
+    background-color: rgba(16, 25, 31, 0.705);
+    color: rgba(210, 218, 240, 0.904);
 }
 
 #colaboradores {
-
-    margin: 10% -250px;
-    height: 450px;
+    filter: drop-shadow(15px 10px 5px rgba(0, 0, 0,.5));
+    margin: 12% -200px;
+    height: 300px;
 }
 
 ::-webkit-scrollbar{width: 7px;}
