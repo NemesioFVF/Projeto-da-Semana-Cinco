@@ -103,6 +103,7 @@ button {
 input[type="file"] {
     display: none;
 }
+
 #imgFunci {
     padding-top: 10px;
     width: 125px;
@@ -157,7 +158,6 @@ input[type="file"] {
 
 #seleCH {
     margin-left: -174px;
-
 }
 
 ::-webkit-scrollbar{width: 7px;}

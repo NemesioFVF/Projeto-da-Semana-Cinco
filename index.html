@@ -33,7 +33,7 @@
                                         <label>Sexo: </label>
                                     </td>
                                     <td>
-                                        <select> 
+                                        <select id="SX"> 
                                             <option value="" disabled="" selected="" >Gênero</option>
                                             <option value="Masculino" class="black">Masculino</option>
                                             <option value="Feminino" class="black">Feminino</option>
@@ -52,13 +52,13 @@
                                         <label for="rg">RG: </label>
                                     </td>
                                     <td>
-                                        <input type="text" id="RGs" name="rg" size="13" maxlength="13"> 
+                                        <input type="text" id="RGs" name="rg" size="13" maxlength="13" placeholder="00.000.000-0"> 
                                     </td>
                                     <td>
                                         <label id="labCPF" >CPF:</label>
                                     </td>
                                     <td >
-                                        <input id="inCPF" type="text" name="cpf">
+                                        <input id="inCPF" type="text" oninput="mCPF(this)" placeholder="000.000.000-00" >
                                     </td>
                                 </tr>
                                 <tr>
@@ -66,11 +66,11 @@
                                         <label>Estado Cívil: </label>
                                     </td>
                                     <td >
-                                        <select> 
-                                            <option value="" disabled="" selected="" >Estado Cívil</option>
-                                            <option value="Solteiro(a)" class="black">Solteiro(a)</option>
-                                            <option value="Casado(a)" class="black">Casado(a)</option>
-                                            <option value="Viuvo(a)" class="black">Viuvo(a)</option>
+                                        <select id="EstadoCiV"> 
+                                            <option value="" disabled selected >Estado Cívil</option>
+                                            <option value="Solteiro(a)" class="black">Solteiro (a)</option>
+                                            <option value="Casado(a)" class="black">Casado (a)</option>
+                                            <option value="Viuvo(a)" class="black">Viuvo (a)</option>
                                         </select>
                                     </td>
                                     <td>
@@ -78,13 +78,13 @@
                                     </td>
                                     <td >
                                         <select id="seleCH"> 
-                                            <option value="" disabled selected="" >Tipo de Carteira</option>
+                                            <option value="" disabled selected >Tipo de Carteira</option>
                                             <option value="Categoria A" class="black">Categoria A</option>
                                             <option value="Categoria B" class="black">Categoria B</option>
-                                            <option value="Categoria AB" class="black">Categoria AB</option>
                                             <option value="Categoria C" class="black">Categoria C</option>
                                             <option value="Categoria D" class="black">Categoria D</option>
                                             <option value="Categoria E" class="black">Categoria E</option>
+                                            <option value="Categoria AB" class="black">Categoria AB</option>
                                         </select>
                                     </td>
                                     </td>
@@ -121,13 +121,13 @@
                                         <label for="rg">Bairro: </label>
                                     </td>
                                     <td >
-                                        <input type="text" name="bairro"> 
+                                        <input type="text" id="bairro" name="bairro"> 
                                     </td>
                                     <td>
                                         <label class="laCom">Cidade:</label>
                                     </td>
                                     <td >
-                                        <input type="text" name="cidade">
+                                        <input type="text" id="cidade" name="cidade">
                                     </td>
                                 </tr>
                                 <tr>
@@ -135,7 +135,7 @@
                                         <label>Estado: </label>
                                     </td>
                                     <td>
-                                        <input type="text" name="cpf">
+                                        <input type="text" id="estado" name="cpf">
                                     </td>
                                     <td>
                                         <label class="laCom">Complemento: </label>
@@ -148,8 +148,8 @@
                         </fieldset>
                     <br> <br>
  
-        <button id="cadastrar"> Cadastrar </button>
-        <button id="limpar"> Limpar </button>
+        <button id="cadastrar" onclick="SalvarFuncionario()"> Cadastrar </button>
+        <button id="limpar" onclick="localStorage.clear(), location.href=location.href"> Limpar </button>
         </fieldset>
 
          <img src="img/colabF.svg" id="colaboradores" > 
