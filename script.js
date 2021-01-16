@@ -1,3 +1,7 @@
+const divF = document.querySelector('.FotosFuncio');
+const img = document.querySelector('#fotos');
+const file = document.querySelector('#arquivo');
+const addFoto = document.querySelector('#addFC');
 var Funcionarios = JSON.parse(localStorage.getItem('Novos Funcionarios'));
 
 if (Funcionarios == null) { 
@@ -27,8 +31,31 @@ function SalvarFuncionario (){
   localStorage.setItem("Novos Funcionarios", jsonFunc);
   }
 
-// mascara para CPF
+  // add imagem
+  divF.addEventListener('mouseenter', function(){
+    addFoto.style.display = "block";
+});
 
+divF.addEventListener('mouseleave', function(){
+    addFoto.style.display = "none";
+});
+
+file.addEventListener('change', function(){
+    const arquivoEscolhido = this.files[0];
+
+    if (arquivoEscolhido) {
+        const leitor = new FileReader(); 
+//FileReader é uma função predefinida do JS https://developer.mozilla.org/pt-BR/docs/Web/API/FileReader
+
+        leitor.addEventListener('load', function(){
+            img.setAttribute('src', leitor.result);
+        });
+        leitor.readAsDataURL(arquivoEscolhido);
+    }
+});
+
+
+// mascara para CPF
 function mCPF(i){
    
     var cpf = i.value;
