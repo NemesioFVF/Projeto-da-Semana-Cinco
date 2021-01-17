@@ -26,7 +26,7 @@
                                         <label>Nome: </label>
                                     </td>
                                     <td >
-                                        <input required type="text" name="nomeC" id="NomeC" placeholder="Digite o Nome Completo do Funcionario">
+                                        <input required type="text" id="NomeC" placeholder="Nome Completo do Funcionario">
                                     </td>
                                 </tr>
                                 <tr>
@@ -35,7 +35,7 @@
                                     </td>
                                     <td>
                                         <select required id="SX"> 
-                                            <option value="" disabled="" selected >Gênero</option>
+                                            <option value="" disabled selected >Gênero</option>
                                             <option value="Masculino" class="black">Masculino</option>
                                             <option value="Feminino" class="black">Feminino</option>
                                         </select>
@@ -102,33 +102,33 @@
                                         <label for="nome">Rua: </label>
                                     </td>
                                     <td >
-                                        <input required type="text" name="rua" id="nomeR">
+                                        <input required type="text" name="rua" id="nomeR" placeholder="Nome da Rua">
                                     </td>
                                     <td>
                                         <label>Número:</label>
                                     </td>
                                     <td >
-                                        <input required type="text" id="nuM" name="numero">
+                                        <input required type="text" id="nuM" name="numero" placeholder="00000">
                                     </td>
                                     <td>
                                         <label class="cep">CEP: </label>
                                     </td>
                                         <td >
-                                    <input required class="cep2" type="text"> 
+                                    <input required class="cep2" type="text" placeholder="00000-000">
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <label for="rg">Bairro: </label>
+                                        <label >Bairro: </label>
                                     </td>
                                     <td >
-                                        <input required type="text" id="bairro" name="bairro"> 
+                                        <input required type="text" id="bairro" name="bairro" placeholder="Nome do Bairro"> 
                                     </td>
                                     <td>
-                                        <label required class="laCom">Cidade:</label>
+                                        <label required class="laComCID">Cidade:</label>
                                     </td>
                                     <td >
-                                        <input required type="text" id="cidade" name="cidade">
+                                        <input required type="text" id="cidade" name="cidade" placeholder="Nome da Cidade" >
                                     </td>
                                 </tr>
                                 <tr>
@@ -136,18 +136,18 @@
                                         <label>Estado: </label>
                                     </td>
                                     <td>
-                                        <input required type="text" id="estado" name="cpf">
+                                        <input required type="text" id="estado" placeholder="Nome do Estado">
                                     </td>
                                     <td>
                                         <label class="laCom">Complemento: </label>
                                     </td>
                                     <td >
-                                        <input required id="inCom" type="text" name="cpf">
+                                        <input id="inCom" type="text" placeholder="Digite um Complemento se houver">
                                     </td>
                                 </tr>
                             </table>
                         </fieldset>
-                    <br> <br>
+                    <br>
  
         <button id="cadastrar" onclick="SalvarFuncionario()"> Cadastrar </button>
         

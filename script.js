@@ -31,6 +31,7 @@ function SalvarFuncionario (){
   localStorage.setItem("Novos Funcionarios", jsonFunc);
   }
 
+
   // add imagem
   divF.addEventListener('mouseenter', function(){
     addFoto.style.display = "block";

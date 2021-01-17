@@ -47,6 +47,8 @@ button {
     color: azure;
     font-size: 1em;
     transition: all 1s;
+    margin-top: 2%;
+    
 }
 
 *:required:invalid {
@@ -65,8 +67,7 @@ margin-left: 60%;
 }
 
 #cadastrar:hover{
-    background-image: linear-gradient(1000deg, #27a16e, #3fa127);
-    
+    background-image: linear-gradient(1000deg, #27a16e, #3fa127); 
 }
 
 #cadastrar:active {
@@ -95,11 +96,12 @@ margin-left: 60%;
     border-radius: 15px;
     border-color: rgb(255, 255, 255);
     border-spacing: 50px;
-    height: 610px;
+    height: 580px;
+    width: 0px;
 }
 
 #DataDNas{
-    margin-left: -405px;
+    margin-left: -400px;
 }
 
 #data{
@@ -109,8 +111,8 @@ margin-left: 60%;
 }
 
 #NomeC {
-    width: 550px;
-    padding : -25%;
+    width: 590px;
+    padding :0%;
 }
 
 #nomeR {
@@ -118,25 +120,25 @@ margin-left: 60%;
     padding : -25%;
 }
 #inCom{
-    width: 320px;
+    width: 344px;
 }
 
 #nuM {
-    width: 80px;
+    width: 95px;
     margin-left: 1px;
 }
 
 .cep {
-    margin-left: -210px;
+    margin-left: -230px;
 }
 
 .cep2 {
-    margin-left: -160px;
-    width: 131px;
+    margin-left: -191px;
+    width: 160px;
 }
 
 .dadosP {
-    width: -10px;
+    padding: 1px;
     display: flex;
     margin-right: 5px;
 }
@@ -179,7 +181,11 @@ margin-left: 60%;
 }
 
 .laCom {
-    margin-left: -90px;
+    margin-left: -60px;
+}
+
+#bairro {
+    width: 318px;
 }
 
 #RGs{
@@ -187,11 +193,12 @@ margin-left: 60%;
 }
 
 #labCPF {
-    margin-left: -300px;
+    margin-left: -290px;
 }
 
 #inCPF {
-    margin-left: -247px;
+    margin-left: -210px;
+    width: 180px;
 }
 
 #colaboradores {
@@ -201,11 +208,16 @@ margin-left: 60%;
     width: 555px;
 }
 
+#cidade {
+
+    width: 344px;
+}
+
 #labEC {
-    margin-left: -400px;
+    margin-left: -430px;
 }
 
 #seleCH {
-    margin-left: -160px;
-    width: 175px;
+    margin-left: -210px;
+    width: 189px;
 }
