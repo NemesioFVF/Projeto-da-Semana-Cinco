@@ -53,13 +53,13 @@
                                         <label for="rg">RG: </label>
                                     </td>
                                     <td>
-                                        <input required type="text" id="RGs" size="12" onkeypress="return mascaraRG(event)" maxlength="12" placeholder="00.000.000-0"> 
+                                        <input required type="text" id="RGs" size="12" maxlength="12" name="rg" onkeydown="javascript: fMasc(this,mRG)" placeholder="00.000.000-0"> 
                                     </td>
                                     <td>
                                         <label id="labCPF" >CPF:</label>
                                     </td>
                                     <td >
-                                        <input required maxlength="14" size="14" autocomplete="off" id="inCPF" type="text" onkeypress="return mascaraCPF(event)" oninput="TestaCPF()" placeholder="000.000.000-00" >
+                                        <input required maxlength="14" size="14" autocomplete="off" id="inCPF" type="text" name="cpf" onkeydown="javascript: fMasc(this, mCPF)" placeholder="000.000.000-00" >
                                     </td>
                                 </tr>
                                 <tr>
@@ -86,6 +86,7 @@
                                             <option value="Categoria D" class="black">Categoria D</option>
                                             <option value="Categoria E" class="black">Categoria E</option>
                                             <option value="Categoria AB" class="black">Categoria AB</option>
+                                            <option value="Não Possui CNH" class="black">Não Possui CNH</option>
                                         </select>
                                     </td>
                                     </td>
@@ -114,7 +115,7 @@
                                         <label class="cep">CEP: </label>
                                     </td>
                                         <td >
-                                    <input required class="cep2" type="text" maxlength="9" size="9"  onchange="pegandoDadosCEP(this.value)" placeholder="00000-000">
+                                    <input required class="cep2" type="text" maxlength="9" size="9" name="ceps" onkeydown="javascript: fMasc(this,mCEP)" onchange="pegandoDadosCEP(this.value)" placeholder="00000-000">
                                     </td>
                                 </tr>
                                 <tr>

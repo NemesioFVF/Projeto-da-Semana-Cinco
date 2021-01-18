@@ -25,14 +25,12 @@ function SalvarFuncionario (){
       'Cidade' : document.getElementById('cidade').value,
       'Estado' : document.getElementById('estado').value,
       'Complemento' : document.getElementById('inCom').value,
-
       });
   const jsonFunc = JSON.stringify(Funcionarios);
   localStorage.setItem("Novos Funcionarios", jsonFunc);
   }
 
-
-  // add imagem
+// add imagem
   divF.addEventListener('mouseenter', function(){
     addFoto.style.display = "block";
 });
@@ -46,6 +44,7 @@ file.addEventListener('change', function(){
 
     if (arquivoEscolhido) {
         const leitor = new FileReader(); 
+
 //FileReader é uma função predefinida do JS https://developer.mozilla.org/pt-BR/docs/Web/API/FileReader
 
         leitor.addEventListener('load', function(){
@@ -55,10 +54,17 @@ file.addEventListener('change', function(){
     }
 });
 
-
+// mascara para número do endereço
+function mascaraNumero(e) {
+    var charCode = e.charCode ? e.charCode : e.keyCode;
+    if (charCode != 8 && charCode != 9) {
+        if (charCode < 48 || charCode > 57) {
+            return false;
+        }
+    }
+}
 
 // data de nascimento
-
 function IdadeFunc (){
     var data = document.getElementById("data").value;
     data = data.replace(/\//g, "-");
@@ -73,68 +79,57 @@ function IdadeFunc (){
     var idade = hoje.getFullYear() - nasc.getFullYear();
     var m = hoje.getMonth() - nasc.getMonth();
     if (m < 0 || (m === 0 && hoje.getDate() < nasc.getDate())) idade--;
-    
+
     if(idade < 14){
        alert("ERRO NA DATA DE NASCIMENTO! - Funcionario com  " + idade + " ano(s), não pode ser cadastrado.");
        return false;
     }
- 
-    if(idade >= 18 && idade <= 60){
+    if(idade >= 14 && idade <= 60){
        return true;
     }
-
     return false;
  }
 
-
-
-
- function mascaraCPF(e){
-    var charCode = e.charCode ? e.charCode : e.keyCode;
-    var cpf = document.getElementById("inCPF")
-    if (charCode != 8 && charCode != 9) {
-        if (charCode < 48 || charCode > 57) {
-            return false;
-        }
-    }
-
-    if (cpf.length == 3 || cpf.length == 7) cpf.value += ".";
-    if (cpf.length == 11) i.value += "-";
- }
-
-
-
-
- // mascara para RG
- function mascaraRG(e) {
-    var charCode = e.charCode ? e.charCode : e.keyCode;
-    var rg = document.getElementById("NumeroS")
-    if (charCode != 8 && charCode != 9) {
-        if (charCode < 48 || charCode > 57) {
-            return false;
-        }
-    }
-
-    if(rg.value.length == 2){
-      rg.value += '.'
-    }
+// mascaras para os campos
+function fMascEx() {
+    obj.value=masc(obj.value)
 }
 
+ function fMasc(objeto,mascara) {
+    obj=objeto
+    masc=mascara
+    setTimeout("fMascEx()",1)
+}
 
-// mascara para número do endereço
-function mascaraNumero(e) {
-    var charCode = e.charCode ? e.charCode : e.keyCode;
-    if (charCode != 8 && charCode != 9) {
-        if (charCode < 48 || charCode > 57) {
-            return false;
-        }
-    }
+//mascara para CPF 000.000.000-00
+function mCPF(cpf){
+    cpf=cpf.replace(/\D/g,"")
+    cpf=cpf.replace(/(\d{3})(\d)/,"$1.$2")
+    cpf=cpf.replace(/(\d{3})(\d)/,"$1.$2")
+    cpf=cpf.replace(/(\d{3})(\d{1,2})$/,"$1-$2")
+    return cpf
+}
+
+//mascara para RG 00.000.000-0
+function mRG(rg){
+    rg=rg.replace(/\D/g,"")
+    rg=rg.replace(/(\d{2})(\d)/,"$1.$2")
+    rg=rg.replace(/(\d{3})(\d)/,"$1.$2")
+    rg=rg.replace(/(\d{3})(\d{1,2})$/,"$1-$2")
+    return rg
+}
+
+// mascara para CEP 00.000-000
+function mCEP(ceps){
+    ceps=ceps.replace(/\D/g,"")
+    ceps=ceps.replace(/^(\d{5})(\d)/,"$1-$2")
+    return ceps
 }
 
 // validando CEP preenchendo os campos 'Nome da Rua' , 'Bairro', 'Cidade' e 'Estado'
-function pegandoDadosCEP (i) {
+function pegandoDadosCEP (ceps) {
     let xhr = new XMLHttpRequest()
-    let url = 'https://viacep.com.br/ws/' + i + '/json/unicode/'
+    let url = 'https://viacep.com.br/ws/' + ceps + '/json/unicode/'
     xhr.open('GET', url, true)
     xhr.onreadystatechange = function () {
         if (xhr.readyState == 4) {
