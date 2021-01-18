@@ -26,7 +26,7 @@
                                         <label>Nome: </label>
                                     </td>
                                     <td >
-                                        <input required type="text" id="NomeC" placeholder="Nome Completo do Funcionario">
+                                        <input required type="text" id="NomeC" name="NomeC" placeholder="Nome Completo do Funcionario">
                                     </td>
                                 </tr>
                                 <tr>
@@ -34,17 +34,17 @@
                                         <label>Sexo: </label>
                                     </td>
                                     <td>
-                                        <select required id="SX"> 
+                                        <select required id="SX" name="SX"> 
                                             <option value="" disabled selected >Gênero</option>
                                             <option value="Masculino" class="black">Masculino</option>
                                             <option value="Feminino" class="black">Feminino</option>
                                         </select>
                                     </td>
                                     <td>
-                                        <label required id="DataDNas"  >Data de Nascimento: </label>
+                                        <label required id="DataDNas" >Data de Nascimento: </label>
                                     </td>
                                     <td>
-                                        <input required type="date" onchange="return IdadeFunc()" id="data"> 
+                                        <input required type="date" name="date" onchange="return IdadeFunc()" id="data"> 
                                     </td>
                                 </tr>
                                 <tr>
@@ -67,7 +67,7 @@
                                         <label>Estado Cívil: </label>
                                     </td>
                                     <td >
-                                        <select required id="EstadoCiV"> 
+                                        <select required id="EstadoCiV" name="EstadoCiV"> 
                                             <option value="" disabled selected >Estado Cívil</option>
                                             <option value="Solteiro(a)" class="black">Solteiro (a)</option>
                                             <option value="Casado(a)" class="black">Casado (a)</option>
@@ -78,7 +78,7 @@
                                         <label id="labEC" >Carteira de Habilitação: </label>
                                     </td>
                                     <td >
-                                        <select required id="seleCH"> 
+                                        <select required id="seleCH" name="seleCH"> 
                                             <option value="" disabled selected >Tipo de Carteira</option>
                                             <option value="Categoria A" class="black">Categoria A</option>
                                             <option value="Categoria B" class="black">Categoria B</option>
@@ -103,13 +103,13 @@
                                         <label>Rua: </label>
                                     </td>
                                     <td >
-                                        <input required readonly type="text" id="nomeR" placeholder="Nome da Rua">
+                                        <input required readonly type="text" id="nomeR" name="nomeR" placeholder="Nome da Rua">
                                     </td>
                                     <td>
                                         <label>Número:</label>
                                     </td>
                                     <td >
-                                        <input required type="text" id="nuM" onkeypress="return mascaraNumero(event)" maxlength="5" size="1" placeholder="00000">
+                                        <input required type="text" id="nuM" name="nuM" onkeypress="return mascaraNumero(event)" maxlength="5" size="1" placeholder="00000">
                                     </td>
                                     <td>
                                         <label class="cep">CEP: </label>
@@ -123,13 +123,13 @@
                                         <label >Bairro: </label>
                                     </td>
                                     <td >
-                                        <input required  readonly  type="text" id="bairro" placeholder="Nome do Bairro"> 
+                                        <input required  readonly  type="text" id="bairro" name="bairro" placeholder="Nome do Bairro"> 
                                     </td>
                                     <td>
                                         <label class="laComCID">Cidade:</label>
                                     </td>
                                     <td >
-                                        <input required readonly type="text" id="cidade" placeholder="Nome da Cidade" >
+                                        <input required readonly type="text" id="cidade" name="cidade" placeholder="Nome da Cidade" >
                                     </td>
                                 </tr>
                                 <tr>
@@ -137,13 +137,13 @@
                                         <label>Estado: </label>
                                     </td>
                                     <td>
-                                        <input required readonly type="text" id="estado" placeholder="Nome do Estado">
+                                        <input required readonly type="text" id="estado" name="estado" placeholder="Nome do Estado">
                                     </td>
                                     <td>
                                         <label class="laCom">Complemento: </label>
                                     </td>
                                     <td >
-                                        <input id="inCom" type="text" placeholder="Digite um Complemento se houver">
+                                        <input id="inCom" type="text" name="inCom" placeholder="Digite um Complemento se houver">
                                     </td>
                                 </tr>
                             </table>

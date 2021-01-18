@@ -28,6 +28,71 @@ function SalvarFuncionario (){
       });
   const jsonFunc = JSON.stringify(Funcionarios);
   localStorage.setItem("Novos Funcionarios", jsonFunc);
+
+//veridicando se os campos foram preenchidos
+    if (document.getElementById('NomeC').value == "") {
+        alert("Preencha o Nome do Funcionário.");
+        NomeC.focus();
+        localStorage.clear();
+        return false;
+    }
+
+    if (document.getElementById('SX').value == "") {
+        alert("Selecione o Sexo do Funcionário.");
+        SX.focus();
+        localStorage.clear();
+        return false;
+    }
+
+    if (document.getElementById('data').value == "") {
+        alert("Informe a Data de Nascimento do Funcionário.");
+        data.focus();
+        localStorage.clear();
+        return false;
+    }
+
+    if (document.getElementById('RGs').value == "") {
+        alert("Informe o RG do Funcionário.");
+        RGs.focus();
+        localStorage.clear();
+        return false;
+    }
+
+    if (document.getElementById('inCPF').value == "") {
+        alert("Informe o CPF do Funcionário.");
+        inCPF.focus();
+        localStorage.clear();
+        return false;
+    }
+
+    if (document.getElementById('EstadoCiV').value == "") {
+        alert("Selecione o Estado Cívil do Funcionário.");
+        EstadoCiV.focus();
+        localStorage.clear();
+        return false;
+    }
+
+    if (document.getElementById('seleCH').value == "") {
+        alert("Selecione o Tipo de CNH do Funcionário.");
+        seleCH.focus();
+        localStorage.clear();
+        return false;
+    }
+
+    if (document.getElementById('nuM').value == "") {
+        alert("Informe o Número da rezidência do do Funcionário.");
+        nuM.focus();
+        localStorage.clear();
+        return false;
+    }
+
+    if (document.querySelector('.cep2').value == "") {
+        alert("Informe o CEP da rezidência do do Funcionário.");
+        cep2.focus();
+        localStorage.clear();
+        return false;
+    }
+
   }
 
 // add imagem
