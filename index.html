@@ -26,7 +26,7 @@
                                         <label>Nome: </label>
                                     </td>
                                     <td >
-                                        <input required type="text" id="NomeC" name="NomeC" placeholder="Nome Completo do Funcionario">
+                                        <input required type="text" id="NomeC" name="NomeC" autocomplete="off" placeholder="Nome Completo do Funcionario">
                                     </td>
                                 </tr>
                                 <tr>
@@ -34,7 +34,7 @@
                                         <label>Sexo: </label>
                                     </td>
                                     <td>
-                                        <select required id="SX" name="SX"> 
+                                        <select required id="SX" name="SX" autocomplete="off"> 
                                             <option value="" disabled selected >Gênero</option>
                                             <option value="Masculino" class="black">Masculino</option>
                                             <option value="Feminino" class="black">Feminino</option>
@@ -44,7 +44,7 @@
                                         <label required id="DataDNas" >Data de Nascimento: </label>
                                     </td>
                                     <td>
-                                        <input required type="date" name="date" onchange="return IdadeFunc()" id="data"> 
+                                        <input required type="date" name="date" maxlength="4" minlength="4" onchange="return IdadeFunc()" id="data"> 
                                     </td>
                                 </tr>
                                 <tr>
@@ -53,13 +53,13 @@
                                         <label for="rg">RG: </label>
                                     </td>
                                     <td>
-                                        <input required type="text" id="RGs" size="12" maxlength="12" name="rg" onkeydown="javascript: fMasc(this,mRG)" placeholder="00.000.000-0"> 
+                                        <input required autocomplete="off" type="text" id="RGs" maxlength="12" minlength="12" name="rg" onkeydown="javascript: fMasc(this,mRG)" placeholder="00.000.000-0"> 
                                     </td>
                                     <td>
                                         <label id="labCPF" >CPF:</label>
                                     </td>
                                     <td >
-                                        <input required maxlength="14" size="14" autocomplete="off" id="inCPF" type="text" name="cpf" onkeydown="javascript: fMasc(this, mCPF)" placeholder="000.000.000-00" >
+                                        <input required maxlength="14" minlength="14" autocomplete="off" id="inCPF" type="text" name="cpf" onkeydown="javascript: fMasc(this, mCPF)" placeholder="000.000.000-00" >
                                     </td>
                                 </tr>
                                 <tr>
@@ -67,7 +67,7 @@
                                         <label>Estado Cívil: </label>
                                     </td>
                                     <td >
-                                        <select required id="EstadoCiV" name="EstadoCiV"> 
+                                        <select required id="EstadoCiV" name="EstadoCiV" autocomplete="off"> 
                                             <option value="" disabled selected >Estado Cívil</option>
                                             <option value="Solteiro(a)" class="black">Solteiro (a)</option>
                                             <option value="Casado(a)" class="black">Casado (a)</option>
@@ -78,7 +78,7 @@
                                         <label id="labEC" >Carteira de Habilitação: </label>
                                     </td>
                                     <td >
-                                        <select required id="seleCH" name="seleCH"> 
+                                        <select required id="seleCH" name="seleCH" autocomplete="off"> 
                                             <option value="" disabled selected >Tipo de Carteira</option>
                                             <option value="Categoria A" class="black">Categoria A</option>
                                             <option value="Categoria B" class="black">Categoria B</option>
@@ -103,19 +103,19 @@
                                         <label>Rua: </label>
                                     </td>
                                     <td >
-                                        <input required readonly type="text" id="nomeR" name="nomeR" placeholder="Nome da Rua">
+                                        <input required autocomplete="off" readonly type="text" id="nomeR" name="nomeR" placeholder="Nome da Rua" title="Preencha o campo CEP.">
                                     </td>
                                     <td>
                                         <label>Número:</label>
                                     </td>
                                     <td >
-                                        <input required type="text" id="nuM" name="nuM" onkeypress="return mascaraNumero(event)" maxlength="5" size="1" placeholder="00000">
+                                        <input required autocomplete="off" type="text" id="nuM" name="nuM" onkeypress="return mascaraNumero(event)" maxlength="5" minlength="1" placeholder="00000">
                                     </td>
                                     <td>
                                         <label class="cep">CEP: </label>
                                     </td>
                                         <td >
-                                    <input required class="cep2" type="text" maxlength="9" size="9" name="ceps" onkeydown="javascript: fMasc(this,mCEP)" onchange="pegandoDadosCEP(this.value)" placeholder="00000-000">
+                                    <input required autocomplete="off" class="cep2" type="text" maxlength="9" minlength="9" name="ceps" onkeydown="javascript: fMasc(this,mCEP)" onchange="pegandoDadosCEP(this.value)" placeholder="00000-000">
                                     </td>
                                 </tr>
                                 <tr>
@@ -123,13 +123,13 @@
                                         <label >Bairro: </label>
                                     </td>
                                     <td >
-                                        <input required  readonly  type="text" id="bairro" name="bairro" placeholder="Nome do Bairro"> 
+                                        <input required  readonly title="Preencha o campo CEP." type="text" id="bairro" name="bairro" placeholder="Nome do Bairro"> 
                                     </td>
                                     <td>
-                                        <label class="laComCID">Cidade:</label>
+                                        <label class="laComCID" title="Preencha o campo CEP.">Cidade:</label>
                                     </td>
                                     <td >
-                                        <input required readonly type="text" id="cidade" name="cidade" placeholder="Nome da Cidade" >
+                                        <input required readonly title="Preencha o campo CEP." type="text" id="cidade" name="cidade" placeholder="Nome da Cidade" >
                                     </td>
                                 </tr>
                                 <tr>
@@ -137,13 +137,13 @@
                                         <label>Estado: </label>
                                     </td>
                                     <td>
-                                        <input required readonly type="text" id="estado" name="estado" placeholder="Nome do Estado">
+                                        <input required readonly title="Preencha o campo CEP." type="text" id="estado" name="estado" placeholder="Nome do Estado">
                                     </td>
                                     <td>
                                         <label class="laCom">Complemento: </label>
                                     </td>
                                     <td >
-                                        <input id="inCom" type="text" name="inCom" placeholder="Digite um Complemento se houver">
+                                        <input id="inCom" autocomplete="off" type="text" name="inCom" placeholder="Digite um Complemento se houver">
                                     </td>
                                 </tr>
                             </table>

@@ -118,6 +118,7 @@ margin-left: 60%;
 #nomeR {
     width: 320px;
     padding : -25%;
+    cursor: pointer;
 }
 #inCom{
     width: 344px;
@@ -186,6 +187,7 @@ margin-left: 60%;
 
 #bairro {
     width: 318px;
+    cursor: pointer;
 }
 
 #RGs{
@@ -201,6 +203,12 @@ margin-left: 60%;
     width: 180px;
 }
 
+
+#estado{
+
+    cursor: pointer;
+}
+
 #colaboradores {
     filter: drop-shadow(15px 10px 5px rgba(0, 0, 0,.5));
     margin: 12% -132px;
@@ -210,6 +218,7 @@ margin-left: 60%;
 
 #cidade {
     width: 344px;
+    cursor: pointer;
 }
 
 #labEC {

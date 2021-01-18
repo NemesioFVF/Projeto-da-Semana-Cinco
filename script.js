@@ -51,14 +51,14 @@ function SalvarFuncionario (){
         return false;
     }
 
-    if (document.getElementById('RGs').value == "") {
+    if (document.getElementById('RGs').value == "" || document.getElementById('RGs').value < 12) {
         alert("Informe o RG do Funcionário.");
         RGs.focus();
         localStorage.clear();
         return false;
     }
 
-    if (document.getElementById('inCPF').value == "") {
+    if (document.getElementById('inCPF').value == "" || document.getElementById('inCPF').value < 14) {
         alert("Informe o CPF do Funcionário.");
         inCPF.focus();
         localStorage.clear();
@@ -86,11 +86,17 @@ function SalvarFuncionario (){
         return false;
     }
 
-    if (document.querySelector('.cep2').value == "") {
+    if (document.querySelector('.cep2').value == "" || document.querySelector('.cep2').value < 9) {
         alert("Informe o CEP da rezidência do do Funcionário.");
         cep2.focus();
         localStorage.clear();
         return false;
+    }
+    else {
+
+        location.href=location.href
+        alert("Novo Funcionario Cadastrado com Sucesso.");
+        return true;
     }
 
   }
@@ -146,6 +152,7 @@ function IdadeFunc (){
     if (m < 0 || (m === 0 && hoje.getDate() < nasc.getDate())) idade--;
 
     if(idade < 14){
+        document.getElementById("data").value = '';
        alert("ERRO NA DATA DE NASCIMENTO! - Funcionario com  " + idade + " ano(s), não pode ser cadastrado.");
        return false;
     }
