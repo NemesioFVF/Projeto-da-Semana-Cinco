@@ -56,19 +56,97 @@ file.addEventListener('change', function(){
 });
 
 
-// mascara para CPF
-function mCPF(i){
-   
-    var cpf = i.value;
-    
-     // apenas número 
-    if(isNaN(cpf[cpf.length-1])){
-       i.value = cpf.substring(0, cpf.length-1);
-       return;
+
+// data de nascimento
+
+function IdadeFunc (){
+    var data = document.getElementById("data").value;
+    data = data.replace(/\//g, "-");
+    var data_array = data.split("-");
+
+    if(data_array[0].length != 4){
+       data = data_array[2]+"-"+data_array[1]+"-"+data_array[0];
     }
+
+    var hoje = new Date();
+    var nasc  = new Date(data);
+    var idade = hoje.getFullYear() - nasc.getFullYear();
+    var m = hoje.getMonth() - nasc.getMonth();
+    if (m < 0 || (m === 0 && hoje.getDate() < nasc.getDate())) idade--;
     
-    i.setAttribute("maxlength", "14");
-    if (cpf.length == 3 || cpf.length == 7) i.value += ".";
-    if (cpf.length == 11) i.value += "-";
+    if(idade < 14){
+       alert("ERRO NA DATA DE NASCIMENTO! - Funcionario com  " + idade + " ano(s), não pode ser cadastrado.");
+       return false;
+    }
  
+    if(idade >= 18 && idade <= 60){
+       return true;
+    }
+
+    return false;
  }
+
+
+
+
+ function mascaraCPF(e){
+    var charCode = e.charCode ? e.charCode : e.keyCode;
+    var cpf = document.getElementById("inCPF")
+    if (charCode != 8 && charCode != 9) {
+        if (charCode < 48 || charCode > 57) {
+            return false;
+        }
+    }
+
+    if (cpf.length == 3 || cpf.length == 7) cpf.value += ".";
+    if (cpf.length == 11) i.value += "-";
+ }
+
+
+
+
+ // mascara para RG
+ function mascaraRG(e) {
+    var charCode = e.charCode ? e.charCode : e.keyCode;
+    var rg = document.getElementById("NumeroS")
+    if (charCode != 8 && charCode != 9) {
+        if (charCode < 48 || charCode > 57) {
+            return false;
+        }
+    }
+
+    if(rg.value.length == 2){
+      rg.value += '.'
+    }
+}
+
+
+// mascara para número do endereço
+function mascaraNumero(e) {
+    var charCode = e.charCode ? e.charCode : e.keyCode;
+    if (charCode != 8 && charCode != 9) {
+        if (charCode < 48 || charCode > 57) {
+            return false;
+        }
+    }
+}
+
+// validando CEP preenchendo os campos 'Nome da Rua' , 'Bairro', 'Cidade' e 'Estado'
+function pegandoDadosCEP (i) {
+    let xhr = new XMLHttpRequest()
+    let url = 'https://viacep.com.br/ws/' + i + '/json/unicode/'
+    xhr.open('GET', url, true)
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4) {
+            if (xhr.status == 200) {
+                let TxtJSON = xhr.responseText
+                let ObjJSON = JSON.parse(TxtJSON)
+                document.getElementById('nomeR').value = ObjJSON.logradouro
+                document.getElementById('bairro').value = ObjJSON.bairro
+                document.getElementById('cidade').value = ObjJSON.localidade
+                document.getElementById('estado').value = ObjJSON.uf
+            }
+        }
+    }
+    xhr.send();
+}
